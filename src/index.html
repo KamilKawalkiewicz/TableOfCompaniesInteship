@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Recruitment Test</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <!-- <style>
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid rgb(199, 188, 188);
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+      }
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style> -->
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="container_headline">table of companies</h1>
+
+      <!-- SerchingInput -->
+      <div class="searchingInput">
+        <label class="searchingInput_label" for="" id="searchingInput_input"
+          >Search:
+        </label>
+        <input
+          class="searchingInput_input"
+          id="searchingInput_input"
+          type="text"
+        />
+      </div>
+      <!-- End of Searching Input -->
+      <div class="searchingInput">
+        <label class="searchingInput_label" for="">Start Date:</label>
+        <input class="searchingInput_input" id="startDate" type="text" />
+        <label class="searchingInput_label">End Date:</label>
+        <input class="searchingInput_input" id="endDate" type="text" />
+      </div>
+      <div class="table">
+        <table class="table_companies">
+          <tr class="table_companies-tr">
+            <th>Total income</th>
+            <th>Avg income</th>
+            <th>Sum of last month</th>
+          </tr>
+          <tr class="table_companies-tr">
+            <td id="total"></td>
+            <td id="avg"></td>
+            <td id="sum"></td>
+          </tr>
+        </table>
+      </div>
+      <canvas id="myChart" width="100" height="100"></canvas>
+      <!-- Table -->
+      <div class="table">
+        <table class="table_companies">
+          <thead class="table_companies-thead">
+            <tr class="table_companies-tr">
+              <th class="table_companies-id">ID</th>
+              <th class="table_companies-name">Name</th>
+              <th class="table_companies-city">City</th>
+              <th class="table_companies-city">Total income</th>
+            </tr>
+          </thead>
+          <tbody id="myTable" class="table_companies-tbody"></tbody>
+        </table>
+      </div>
+      <!-- End of table -->
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <ul class="pagination_lists"></ul>
+      </div>
+      <!-- End of pagination -->
+
+      <div class="loaderContainer">
+        <div class="loader"></div>
+        <p class="text_p">Czesć ! mam na imię Kamil, dane są ładowane...</p>
+      </div>
+    </div>
+  </body>
+</html>
